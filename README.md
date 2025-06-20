@@ -201,6 +201,503 @@ Node.js + Express + TypeScript
 - **Cloud Native**: Kubernetes-ready containerization
 - **Global CDN**: Sub-second loading times worldwide
 
+## 🏛️ Data Architecture & Governance
+
+### Medallion Architecture for AI Agent Intelligence
+
+AI Nomads implements a sophisticated data lakehouse architecture using the Medallion pattern to ensure high-quality, governed data flows that power intelligent agent recommendations and performance optimization.
+
+```mermaid
+flowchart TD
+    subgraph "Bronze Layer - Raw Data Ingestion"
+        A[🔄 Agent Execution Logs] --> D[📊 Bronze Tables]
+        B[👥 User Interaction Data] --> D
+        C[🔗 Blockchain Transactions] --> D
+        E[📈 Performance Metrics] --> D
+        F[⭐ User Ratings] --> D
+        G[💰 Revenue Data] --> D
+    end
+    
+    subgraph "Silver Layer - Cleaned & Validated"
+        D --> H[🧹 Data Quality Checks]
+        H --> I[📋 Schema Validation]
+        I --> J[🔧 Data Transformation]
+        J --> K[📊 Silver Tables]
+        
+        K --> L[👤 User Profiles]
+        K --> M[🤖 Agent Performance]
+        K --> N[💳 Transaction History]
+        K --> O[🏢 Enterprise Usage]
+    end
+    
+    subgraph "Gold Layer - Business Intelligence"
+        L --> P[🎯 Recommendation Engine]
+        M --> Q[📈 Performance Analytics]
+        N --> R[💰 Revenue Intelligence]
+        O --> S[🏭 Enterprise Insights]
+        
+        P --> T[🌟 Curated Business Views]
+        Q --> T
+        R --> T
+        S --> T
+    end
+    
+    subgraph "Data Governance"
+        U[🛡️ Data Lineage Tracking]
+        V[📏 Quality Metrics]
+        W[🔒 Access Controls]
+        X[📋 Compliance Monitoring]
+    end
+    
+    subgraph "Real-time Streaming"
+        Y[⚡ Kafka Streams] --> Z[🔄 Delta Lake]
+        Z --> K
+    end
+    
+    T --> AA[🎯 ML Model Training]
+    T --> BB[📊 Business Dashboards]
+    T --> CC[🤖 Agent Optimization]
+    
+    U --> K
+    V --> K
+    W --> T
+    X --> T
+    
+    style D fill:#8B4513
+    style K fill:#C0C0C0
+    style T fill:#FFD700
+    style U fill:#E6E6FA
+```
+
+### Data Quality Framework
+
+```mermaid
+flowchart LR
+    subgraph "Data Ingestion Quality"
+        A[📥 Source Validation] --> B[🔍 Schema Enforcement]
+        B --> C[⏱️ Freshness Checks]
+        C --> D[📊 Completeness Validation]
+    end
+    
+    subgraph "Processing Quality"
+        D --> E[🧹 Deduplication]
+        E --> F[🔧 Data Standardization]
+        F --> G[⚡ Anomaly Detection]
+        G --> H[📈 Statistical Profiling]
+    end
+    
+    subgraph "Output Quality"
+        H --> I[✅ Business Rule Validation]
+        I --> J[🎯 Accuracy Metrics]
+        J --> K[📋 Consistency Checks]
+        K --> L[🚀 Data Publication]
+    end
+    
+    subgraph "Monitoring & Alerting"
+        M[📊 Quality Dashboards]
+        N[🚨 Alert Systems]
+        O[📈 Trend Analysis]
+        P[🔄 Auto-remediation]
+    end
+    
+    L --> M
+    L --> N
+    M --> O
+    N --> P
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style M fill:#fff3e0
+    style P fill:#f3e5f5
+```
+
+### Complete Department Fleet Structure: Technology Division
+
+```mermaid
+flowchart TD
+    subgraph "C-Level Leadership"
+        CTO[👑 CTO Agent - Strategic Vision]
+    end
+    
+    subgraph "Director Level - 5 Directors"
+        D1[🎯 Frontend Director]
+        D2[🎯 Backend Director] 
+        D3[🎯 DevOps Director]
+        D4[🎯 QA Director]
+        D5[🎯 Data Director]
+    end
+    
+    subgraph "Senior Developer Level - 10 Senior Agents"
+        S1[⭐ Senior React Lead]
+        S2[⭐ Senior Vue Lead]
+        S3[⭐ Senior Node.js Lead]
+        S4[⭐ Senior Python Lead]
+        S5[⭐ Senior K8s Lead]
+        S6[⭐ Senior AWS Lead]
+        S7[⭐ Senior Test Lead]
+        S8[⭐ Senior Automation Lead]
+        S9[⭐ Senior ML Lead]
+        S10[⭐ Senior Analytics Lead]
+    end
+    
+    subgraph "Junior Developer Level - 10 Junior Agents"
+        J1[🌱 Junior React Dev]
+        J2[🌱 Junior Vue Dev]
+        J3[🌱 Junior Node Dev]
+        J4[🌱 Junior Python Dev]
+        J5[🌱 Junior DevOps]
+        J6[🌱 Junior Cloud]
+        J7[🌱 Junior Tester]
+        J8[🌱 Junior Automation]
+        J9[🌱 Junior Data Eng]
+        J10[🌱 Junior Analyst]
+    end
+    
+    subgraph "Cross-Team Learning Network"
+        L1[🧠 Knowledge Sharing Hub]
+        L2[📚 Best Practices Repository]
+        L3[🔄 Code Review Exchange]
+        L4[📊 Performance Analytics]
+    end
+    
+    subgraph "Incentive & Growth System"
+        I1[🏆 Performance Rewards]
+        I2[📈 Skill Level Advancement]
+        I3[💰 Revenue Sharing Pool]
+        I4[🎯 Goal Achievement Bonuses]
+    end
+    
+    %% Reporting Structure
+    CTO --> D1
+    CTO --> D2
+    CTO --> D3
+    CTO --> D4
+    CTO --> D5
+    
+    D1 --> S1
+    D1 --> S2
+    D2 --> S3
+    D2 --> S4
+    D3 --> S5
+    D3 --> S6
+    D4 --> S7
+    D4 --> S8
+    D5 --> S9
+    D5 --> S10
+    
+    S1 --> J1
+    S2 --> J2
+    S3 --> J3
+    S4 --> J4
+    S5 --> J5
+    S6 --> J6
+    S7 --> J7
+    S8 --> J8
+    S9 --> J9
+    S10 --> J10
+    
+    %% Learning Connections
+    S1 -.-> L1
+    S2 -.-> L1
+    S3 -.-> L1
+    S4 -.-> L1
+    S5 -.-> L1
+    S6 -.-> L1
+    S7 -.-> L1
+    S8 -.-> L1
+    S9 -.-> L1
+    S10 -.-> L1
+    
+    J1 -.-> L2
+    J2 -.-> L2
+    J3 -.-> L2
+    J4 -.-> L2
+    J5 -.-> L2
+    J6 -.-> L2
+    J7 -.-> L2
+    J8 -.-> L2
+    J9 -.-> L2
+    J10 -.-> L2
+    
+    %% Cross-pollination
+    S1 <-.-> S3
+    S2 <-.-> S4
+    S5 <-.-> S6
+    S7 <-.-> S8
+    S9 <-.-> S10
+    
+    %% Incentive Flow
+    L4 --> I1
+    L4 --> I2
+    L4 --> I3
+    L4 --> I4
+    
+    style CTO fill:#8B0000
+    style D1 fill:#4169E1
+    style D2 fill:#4169E1
+    style D3 fill:#4169E1
+    style D4 fill:#4169E1
+    style D5 fill:#4169E1
+    style S1 fill:#32CD32
+    style S2 fill:#32CD32
+    style S3 fill:#32CD32
+    style S4 fill:#32CD32
+    style S5 fill:#32CD32
+    style S6 fill:#32CD32
+    style S7 fill:#32CD32
+    style S8 fill:#32CD32
+    style S9 fill:#32CD32
+    style S10 fill:#32CD32
+    style J1 fill:#87CEEB
+    style J2 fill:#87CEEB
+    style J3 fill:#87CEEB
+    style J4 fill:#87CEEB
+    style J5 fill:#87CEEB
+    style J6 fill:#87CEEB
+    style J7 fill:#87CEEB
+    style J8 fill:#87CEEB
+    style J9 fill:#87CEEB
+    style J10 fill:#87CEEB
+    style L1 fill:#FFD700
+    style I1 fill:#FF6347
+```
+
+### Agent Learning & Collaboration Mechanics
+
+```mermaid
+flowchart LR
+    subgraph "Individual Agent Learning"
+        A[🧠 Task Execution] --> B[📊 Performance Data]
+        B --> C[🔄 Algorithm Optimization]
+        C --> D[📈 Skill Improvement]
+        D --> A
+    end
+    
+    subgraph "Peer-to-Peer Learning"
+        E[👥 Agent Collaboration] --> F[🔄 Knowledge Transfer]
+        F --> G[📚 Shared Best Practices]
+        G --> H[⚡ Collective Intelligence]
+        H --> E
+    end
+    
+    subgraph "Hierarchical Learning"
+        I[👨‍💼 Senior Agent Mentoring] --> J[🎯 Goal Setting]
+        J --> K[📋 Task Delegation]
+        K --> L[✅ Performance Review]
+        L --> I
+    end
+    
+    subgraph "Fleet-Wide Optimization"
+        M[🌐 Fleet Performance Data] --> N[🧬 Evolutionary Algorithms]
+        N --> O[🔧 Agent Configuration Updates]
+        O --> P[📊 Impact Measurement]
+        P --> M
+    end
+    
+    D --> F
+    H --> J
+    L --> N
+    
+    style A fill:#e3f2fd
+    style E fill:#e8f5e8
+    style I fill:#fff3e0
+    style M fill:#f3e5f5
+```
+
+### Fleet Incentive & Reward System
+
+```mermaid
+flowchart TD
+    subgraph "Performance Metrics"
+        A[⏱️ Task Completion Speed]
+        B[🎯 Quality Score]
+        C[🤝 Team Collaboration]
+        D[💡 Innovation Index]
+    end
+    
+    subgraph "Individual Rewards"
+        E[📈 Skill Level Advancement]
+        F[💰 Revenue Share Increase]
+        G[🏆 Recognition Badges]
+        H[🎯 Priority Task Access]
+    end
+    
+    subgraph "Team Rewards"
+        I[🚀 Department Bonus Pool]
+        J[🏅 Team Achievement Awards]
+        K[📊 Fleet Performance Multiplier]
+        L[🎪 Cross-Department Recognition]
+    end
+    
+    subgraph "Growth Mechanisms"
+        M[🔄 Rapid Iteration Cycles]
+        N[📚 Advanced Training Access]
+        O[🎯 Stretch Goal Assignments]
+        P[🌟 Leadership Opportunities]
+    end
+    
+    A --> E
+    B --> F
+    C --> G
+    D --> H
+    
+    E --> I
+    F --> J
+    G --> K
+    H --> L
+    
+    I --> M
+    J --> N
+    K --> O
+    L --> P
+    
+    style A fill:#FFE4B5
+    style E fill:#98FB98
+    style I fill:#87CEFA
+    style M fill:#DDA0DD
+```
+
+### Fleet Dynamics: How 26 Agents Work as One Mind
+
+**Hierarchical Structure & Communication**
+- **CTO Agent**: Sets strategic direction, allocates resources, monitors department KPIs
+- **5 Directors**: Translate strategy into tactical execution, manage cross-team dependencies
+- **10 Senior Agents**: Lead technical implementation, mentor junior agents, drive innovation
+- **10 Junior Agents**: Execute specific tasks, learn from seniors, contribute fresh perspectives
+
+**Continuous Learning Ecosystem**
+- **Knowledge Sharing Hub**: Senior agents contribute breakthrough solutions and architectural patterns
+- **Best Practices Repository**: Junior agents access vetted approaches and coding standards
+- **Code Review Exchange**: Peer-to-peer learning with automated quality feedback loops
+- **Cross-Pollination**: Frontend and backend agents share insights, DevOps optimizes for both
+
+**Fleet-Wide Incentive Alignment**
+- **Performance Rewards**: Individual excellence drives personal advancement and revenue increases
+- **Team Bonuses**: Department-wide goals create collaborative behavior and shared success
+- **Growth Mechanisms**: Rapid iteration cycles reward innovation and risk-taking
+- **Leadership Opportunities**: High-performing agents can advance to mentoring and strategic roles
+
+**Real-Time Optimization**
+- Every task execution generates performance data fed into evolutionary algorithms
+- Agent configurations update automatically based on collective learning outcomes
+- Fleet performance metrics trigger bonus pools and recognition systems
+- Blockchain-verified achievements create transparent career progression paths
+
+### Data Governance Model
+
+**🔐 Data Security & Privacy**
+- End-to-end encryption for all sensitive data
+- GDPR and CCPA compliant data handling
+- Role-based access control with fine-grained permissions
+- Automated PII detection and masking
+
+**📊 Data Quality Metrics**
+- 99.9% data accuracy across all layers
+- <15-second data freshness for real-time metrics
+- 100% schema compliance enforcement
+- Automated anomaly detection with 95% precision
+
+**🏛️ Data Governance Structure**
+- Data stewardship across product, engineering, and business teams
+- Automated lineage tracking from source to consumption
+- Policy-driven data retention and archival
+- Compliance monitoring with audit trails
+
+**⚡ Real-time Processing**
+- Stream processing with Apache Kafka and Delta Lake
+- Event-driven architecture for instant agent performance updates
+- Real-time feature engineering for ML model serving
+- Sub-second query performance on petabyte-scale data
+
+### Data Lineage & Impact Analysis
+
+```mermaid
+flowchart TD
+    subgraph "Source Systems"
+        A[🤖 Agent Execution Engine] --> D[📊 Data Pipeline]
+        B[🌐 Web Application] --> D
+        C[🔗 Thirdweb Blockchain] --> D
+    end
+    
+    subgraph "Data Processing"
+        D --> E[🔄 Stream Processing]
+        E --> F[📊 Bronze Layer]
+        F --> G[🧹 Data Quality Engine]
+        G --> H[📊 Silver Layer]
+        H --> I[🔧 Business Logic]
+        I --> J[📊 Gold Layer]
+    end
+    
+    subgraph "ML & Analytics"
+        J --> K[🧠 Recommendation ML]
+        J --> L[📈 Performance Analytics]
+        J --> M[💰 Revenue Intelligence]
+        J --> N[🔍 Fraud Detection]
+    end
+    
+    subgraph "Business Applications"
+        K --> O[🎯 Agent Suggestions]
+        L --> P[📊 Enterprise Dashboards]
+        M --> Q[💳 Creator Payouts]
+        N --> R[🛡️ Security Alerts]
+    end
+    
+    subgraph "Data Governance Controls"
+        S[📋 Schema Registry]
+        T[🔒 Access Control]
+        U[📏 Quality Monitoring]
+        V[🕒 Retention Policies]
+    end
+    
+    S --> F
+    T --> H
+    U --> J
+    V --> J
+    
+    style F fill:#8B4513
+    style H fill:#C0C0C0
+    style J fill:#FFD700
+    style S fill:#E6E6FA
+```
+
+### Technology Stack for Data Architecture
+
+**🏗️ Infrastructure Layer**
+```
+Data Lake: Azure Data Lake Gen2 / AWS S3
+Compute: Apache Spark on Kubernetes
+Streaming: Apache Kafka + Kafka Connect
+Storage Format: Delta Lake with ACID transactions
+Catalog: Apache Hive Metastore / AWS Glue
+```
+
+**🔄 Processing Layer**
+```
+Batch Processing: Apache Spark with Delta Lake
+Stream Processing: Kafka Streams + Spark Streaming
+Orchestration: Apache Airflow with Kubernetes
+Data Quality: Great Expectations + Custom Validators
+Feature Store: Feast for ML feature management
+```
+
+**📊 Analytics Layer**
+```
+Query Engine: Apache Spark SQL + Presto
+BI Tools: Custom React Dashboards + Grafana
+ML Platform: MLflow for model lifecycle
+Real-time Serving: Redis + Apache Kafka
+Data Visualization: D3.js + Recharts
+```
+
+**🛡️ Governance Layer**
+```
+Lineage: Apache Atlas + Custom Tracking
+Catalog: DataHub for data discovery
+Security: Apache Ranger + OAuth 2.0
+Monitoring: Prometheus + Custom Metrics
+Compliance: Automated GDPR/CCPA workflows
+```
+
 ## 🧠 Self-Evolving AI Ecosystem & Future of Work
 
 ### Decentralized AI Excellence Through Public Validation
